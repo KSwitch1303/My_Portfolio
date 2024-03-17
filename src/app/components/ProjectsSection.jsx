@@ -20,7 +20,7 @@ const projectsData = [
     description: "Web3 video conferencing application",
     image: "/images/projects/2.png",
     tag: ["All", "Web", "Mobile"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/KSwitch1303/CryptoConvo3.0",
     previewUrl: "https://cryptoconvo.vercel.app/",
   },
   {
