@@ -22,14 +22,14 @@ const projectsData = [
     tag: ["All", "Web", "Mobile"],
     gitUrl: "https://github.com/KSwitch1303/CryptoConvo3.0",
     previewUrl: "https://cryptoconvo.vercel.app/",
-  },
+  },  
   {
     id: 3,
     title: "Blog Site",
     description: "A demo blog website",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/KSwitch1303/Blog_Site",
     previewUrl: "/",
   },
   // {
