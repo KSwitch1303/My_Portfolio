@@ -15,7 +15,7 @@ export async function POST(req, res) {
       pass: nodemailerPassword
     }
   });
-  const sendMail = async (mail, name) => {
+  const sendMail = async () => {
     let mailOptions = {
       from: email,
       to: 'ebimieteimisongo@gmail.com',
@@ -36,7 +36,7 @@ export async function POST(req, res) {
     });
   }
   try {
-    sendMail(req.body.email, req.body.name)
+    sendMail()
     // const data = await resend.emails.send({
     //   from: fromEmail,
     //   to: [fromEmail, toEmail],
