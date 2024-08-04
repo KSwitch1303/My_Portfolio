@@ -7,9 +7,11 @@ import Image from "next/image";
 
 const EmailSection = () => {
   const [emailSubmitted, setEmailSubmitted] = useState(false);
+  const [isPending, setIsPending] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsPending(true)
     const data = {
       email: e.target.email.value,
       subject: e.target.subject.value,
@@ -120,8 +122,9 @@ const EmailSection = () => {
             <button
               type="submit"
               className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full"
+              disabled = {isPending}
             >
-              Send Message
+              {isPending ? "Sending..." : "Send"}
             </button>
           </form>
         )}

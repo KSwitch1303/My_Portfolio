@@ -10,46 +10,64 @@ const projectsData = [
     title: "Crypto Convo",
     description: "Web3 video conferencing application",
     image: "/images/projects/2.png",
-    tag: ["All", "Web", "Mobile"],
+    tag: ["All", "React"],
     gitUrl: "/",
     previewUrl: "https://cryptoconvo.vercel.app/",
   },  
   {
     id: 2,
-    title: "Blog Site",
-    description: "A demo blog website",
+    title: "Not Whot",
+    description: "An Online player vs player stake and win card game",
     image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "https://github.com/KSwitch1303/Blog_Site",
-    previewUrl: "/",
+    tag: ["All", "React"],
+    gitUrl: "https://github.com/KSwitch1303/notWhot",
+    previewUrl: "https://notwhot.vercel.app/",
   },
-  // {
-  //   id: 4,
-  //   title: "Food Ordering Application",
-  //   description: "Project 4 description",
-  //   image: "/images/projects/4.png",
-  //   tag: ["All"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 5,
-  //   title: "React Firebase Template",
-  //   description: "Authentication and CRUD operations",
-  //   image: "/images/projects/5.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
+  {
+    id: 3,
+    title: "Not Whot - Backend",
+    description: "An Online player vs player stake and win card game",
+    image: "/images/projects/3.png",
+    tag: ["All", "NodeJS"],
+    gitUrl: "https://github.com/KSwitch1303/notWhot-server",
+    previewUrl: "https://notwhot.vercel.app/",
+  },
+  {
+    id: 6,
+    title: "Language Translation NPM Package",
+    description: "A node package that allows you to write JavaScript code in any of the three major languages in Nigeria",
+    image: "/images/projects/6.png",
+    tag: ["All", "NodeJS"],
+    gitUrl: "https://github.com/KSwitch1303/nigerian-language-package",
+    previewUrl: "https://github.com/KSwitch1303/nigerian-language-package",
+  },
+  {
+    id: 4,
+    title: "School MS",
+    description: "An Online School Management System",
+    image: "/images/projects/4.png",
+    tag: ["All", "React"],
+    gitUrl: "https://github.com/KSwitch1303/school-MS-frontend",
+    previewUrl: "https://school-ms-frontend.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "School MS - Backend",
+    description: "An Online School Management System",
+    image: "/images/projects/4.png",
+    tag: ["All", "NodeJS"],
+    gitUrl: "https://github.com/KSwitch1303/School-Management-System",
+    previewUrl: "https://school-ms-frontend.vercel.app/",
+  },
+  {
+    id: 5,
+    title: "Bank Loan Page",
+    description: "A site to help banks make loan application easier",
+    image: "/images/projects/5.png",
+    tag: ["All", "React", "NodeJS"],
+    gitUrl: "https://github.com/KSwitch1303/FAMFB_LOAN_SITE",
+    previewUrl: "https://famfb-loan.vercel.app/",
+  },
 ];
 
 const ProjectsSection = () => {
@@ -83,13 +101,23 @@ const ProjectsSection = () => {
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
+          name="React"
+          isSelected={tag === "React"}
         />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
-          isSelected={tag === "Mobile"}
+          name="PHP"
+          isSelected={tag === "PHP"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="NodeJS"
+          isSelected={tag === "NodeJS"}
+        />
+        <ProjectTag
+          onClick={handleTagChange}
+          name="Python"
+          isSelected={tag === "Python"}
         />
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
