@@ -21,12 +21,16 @@ export async function POST(req, res) {
           <p>From ${email}</p>
           <p>${message}</p>`
     };
-    await transporter.sendMail(mailOptions, function(error, info){
-      if (error) {
-        console.log(error);
-      } else {
-        console.log('Email sent: ' + info.response);
-      }
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+          resolve();
+        }
+      });
     });
   }
   try {
