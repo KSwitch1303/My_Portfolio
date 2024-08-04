@@ -21,7 +21,7 @@ export async function POST(req, res) {
           <p>From ${email}</p>
           <p>${message}</p>`
     };
-    transporter.sendMail(mailOptions, function(error, info){
+    await transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
       } else {
@@ -30,7 +30,7 @@ export async function POST(req, res) {
     });
   }
   try {
-    sendMail()
+    await sendMail()
     return NextResponse.json(data);
   } catch (error) {
     return NextResponse.json({ error });
