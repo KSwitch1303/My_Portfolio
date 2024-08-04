@@ -68,6 +68,33 @@ const projectsData = [
     gitUrl: "https://github.com/KSwitch1303/FAMFB_LOAN_SITE",
     previewUrl: "https://famfb-loan.vercel.app/",
   },
+  {
+    id: 7,
+    title: "Task Management System",
+    description: "An online task management system for companies",
+    image: "/images/projects/7.png",
+    tag: ["All", "PHP"],
+    gitUrl: "https://github.com/KSwitch1303/Task_Management_System-LAMP-",
+    previewUrl: "https://github.com/KSwitch1303/Task_Management_System-LAMP-",
+  },
+  {
+    id: 8,
+    title: "Online Auction Web App",
+    description: "An online auction web application",
+    image: "/images/projects/8.png",
+    tag: ["All", "PHP"],
+    gitUrl: "https://github.com/KSwitch1303/auction-system",
+    previewUrl: "https://github.com/KSwitch1303/auction-system",
+  },
+  {
+    id: 9,
+    title: "Credit Default Prediction",
+    description: "A credit default prediction script",
+    image: "/images/projects/9.png",
+    tag: ["All", "Python"],
+    gitUrl: "https://github.com/KSwitch1303/creditDefaultPrediction",
+    previewUrl: "https://github.com/KSwitch1303/creditDefaultPrediction",
+  },
 ];
 
 const ProjectsSection = () => {
