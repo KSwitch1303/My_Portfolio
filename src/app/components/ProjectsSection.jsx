@@ -96,7 +96,6 @@ const projectsData = [
     previewUrl: "https://github.com/KSwitch1303/creditDefaultPrediction",
   },
 ];
-
 const ProjectsSection = () => {
   const [tag, setTag] = useState("All");
   const ref = useRef(null);
@@ -120,32 +119,34 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="React"
-          isSelected={tag === "React"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="PHP"
-          isSelected={tag === "PHP"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="NodeJS"
-          isSelected={tag === "NodeJS"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Python"
-          isSelected={tag === "Python"}
-        />
+      <div className="overflow-x-auto sm:overflow-x-visible">
+        <div className="inline-flex sm:flex sm:flex-row sm:justify-center items-center gap-2 py-6 whitespace-nowrap sm:whitespace-normal">
+          <ProjectTag
+            onClick={() => handleTagChange("All")}
+            name="All"
+            isSelected={tag === "All"}
+          />
+          <ProjectTag
+            onClick={() => handleTagChange("React")}
+            name="React"
+            isSelected={tag === "React"}
+          />
+          <ProjectTag
+            onClick={() => handleTagChange("PHP")}
+            name="PHP"
+            isSelected={tag === "PHP"}
+          />
+          <ProjectTag
+            onClick={() => handleTagChange("NodeJS")}
+            name="NodeJS"
+            isSelected={tag === "NodeJS"}
+          />
+          <ProjectTag
+            onClick={() => handleTagChange("Python")}
+            name="Python"
+            isSelected={tag === "Python"}
+          />
+        </div>
       </div>
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
@@ -154,7 +155,7 @@ const ProjectsSection = () => {
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
+            transition={{ duration: 0.3, delay: index * 0.2 }}
           >
             <ProjectCard
               key={project.id}
